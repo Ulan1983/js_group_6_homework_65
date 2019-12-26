@@ -1,12 +1,19 @@
 import React from 'react';
 import './App.css';
+import Layout from "./components/Layout/Layout";
+import {BrowserRouter, Switch} from "react-router-dom";
+import {Container} from "reactstrap";
 
-function App() {
-  return (
-    <div>
+const App = () => (
+    <BrowserRouter>
+      <Container>
+        <Layout/>
+        <Switch>
 
-    </div>
+        </Switch>
+      </Container>
+    </BrowserRouter>
   );
-}
+
 
 export default App;
