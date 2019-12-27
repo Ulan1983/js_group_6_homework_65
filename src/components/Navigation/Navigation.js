@@ -8,9 +8,6 @@ const Navigation = () => (
 		<Navbar color="light" light expand="md">
 			<NavbarBrand>Static pages</NavbarBrand>
 			<Nav className="ml-5" navbar>
-				<NavItem>
-					<NavLink tag={RouterNavLink} to="/" exact>Home</NavLink>
-				</NavItem>
 				{CATEGORIES.map(c => (
 					<NavItem key={c}>
 						<NavLink className="text-capitalize" tag={RouterNavLink} to={"/pages/" + c} exact>{c}</NavLink>

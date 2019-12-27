@@ -4,7 +4,7 @@ import Navigation from "../Navigation/Navigation";
 const Layout = props => (
 		<Fragment>
 			<Navigation/>
-			{props.children}
+			<main>{props.children}</main>
 		</Fragment>
 	);
 
