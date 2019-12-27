@@ -31,10 +31,14 @@ class EditPage extends Component {
 			content: this.state.content
 		};
 
-		await axiosApi.put('/pages/' + this.state.pageId + '.json', page);
+		if (this.state.title !== '' && this.state.content !== '') {
+			await axiosApi.put('/pages/' + this.state.pageId + '.json', page);
 			this.props.history.replace({
 				pathname: '/pages/' + this.state.pageId
 			})
+		} else {
+			alert('Please fill out all required fields!');
+		}
 	};
 
 	idChanged = e => {
