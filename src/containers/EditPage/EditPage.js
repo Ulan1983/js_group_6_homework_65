@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 import {CATEGORIES} from "../../constants";
 import axiosApi from "../../axios-pages";
 import {Button, Form, FormGroup, Input, Label} from "reactstrap";
@@ -43,7 +43,7 @@ class EditPage extends Component {
 
 	render() {
 		return (
-			<div>
+			<Fragment>
 				<h3>Edit pages</h3>
 				<Form onSubmit={this.editHandler}>
 					<FormGroup>
@@ -83,7 +83,7 @@ class EditPage extends Component {
 					</FormGroup>
 					<Button>Save</Button>
 				</Form>
-			</div>
+			</Fragment>
 		);
 	}
 }
